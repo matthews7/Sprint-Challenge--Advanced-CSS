@@ -1,15 +1,56 @@
 // Home Content
 
 .home {
+  h3:hover{
+    animation: slide 10s infinite;
+  }
+    
+    @keyframes slide{
+      0%, 75% {
+        background-color: red;
+        color:@porcelain
+      }
+      25%, 100%{
+        background-color: @porcelain;
+        color: blue;
+      }
+      50%{
+        background-color: blue;
+        color:@porcelain;
 
+    }
+  }
   .intro {
+    
+    img{
+      border-radius: 10px;
+      
+      @media @phone{
+        // max-width: 500px
+        width: 100%;
+        
+        }
+      }
+    }
+
 
     h2 {
       padding: 15px;
+
+      @media @phone{
+        .padding();
+        margin: 0 2%;
+      }
     }
+
 
     p {
       padding:0 15px;
+
+      @media @phone{
+        .padding();
+        margin: 0 2%;
+      }
     }
   
   }
@@ -25,17 +66,38 @@
       border-radius: 20px;
       height: 100%;
     }
+
+    @media @phone{
+      .none{
+        display: none;
+      }
+
+      img{
+        width:100%;
+        margin: 2% 5%;
+      }
+    }
   }
 
   .visit-planets {
     padding: 15px;
-
+    @media @phone{
+      padding: 15px 0 0 0;
+      margin: 0 2.5%;
+      
+    }
     h3 {
       margin-top: 11px;
+  
     }
 
     p {
       margin-top: 13px;
+      
+      @media @phone{
+        margin: 0;
+        
+      }
     }
   }
 
@@ -46,8 +108,20 @@
     display: flex;
     justify-content: center;
 
+    @media @phone{
+      // margin: 1.5%;
+      padding: 2.5%;
+      border-top: 1px solid @main-border-color;
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: flex-start;
+    }
     .walk-text {
       width: 50%;
+      @media @phone{
+        width: 100%;
+      }
+      
 
       h3 {
         margin-bottom: 10px;
@@ -55,9 +129,18 @@
 
       p {
         margin-bottom: 26px;
+        @media @phone{
+          width: 100%;
+          margin: 0;
+        }
       }
 
       .btn {
+        .button(30%, center);
+        @media @phone{
+          width: 100%;
+          padding: 5%;
+        }
       }
     }
 
@@ -65,11 +148,20 @@
       width: 46%;
       margin-left: 4%;
       
+      @media @phone{
+        width: 100%;
+        margin: 2% 4%;
+      }
+
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+
+        @media @phone{
+          // margin: 2% 6%
+        }
       }
     }
   }
-}// home
+// home
